@@ -38,7 +38,8 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptas libero assumenda! Doloremque, provident qui nisi, aperiam expedita voluptatibus autem illum rem, blanditiis vitae alias? Suscipit soluta deserunt reprehenderit ex!
         <hr>
         <br>
-        <button>Test</button>
+        <button onclick="console.log('yeaaah')">Test</button>
+        <button onclick="count()">Test function</button>
 
         <hr />
         <input type="button" value="Button from Input">
@@ -72,24 +73,28 @@
         </div>
         <!-- adauga img prin document si nu link-->
         <img src="guido.jpeg" alt="poza cu guido">
-        <!-- way 1 -->
-        <script src="script.js"></script>
-        <!-- way 2 -->
-        <script>
-            alert("Hello World!");
-        </script>
-        <!-- way 3 -->
-        <script type="module" src="script.js"></script>
-        <!-- Adaugare fisiere externe de JS -->
-        <script src="script.js"></script>
-        <canvas width="120" height="120">
-            An alternative text describing what your canvas displays.
-        </canvas>
+        <hr>
+        <canvas id="draw1"></canvas>
     </main>
 
     <footer>
         Copyright &copy; 2024
     </footer>
+
+    <script>
+        console.log("Hello World!");
+
+        const canvas = document.getElementById("draw1");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "red";
+        ctx.fillRect(10, 10, 150, 100);
+    </script>
+
+    <script src="script.js"></script>   
+    <!--adaugare fisiere externe de js prin module type-->
+    <script type="module">
+        import {count} from "./script-counter.js";
+    </script>
 </body>
 
 </html>
