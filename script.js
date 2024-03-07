@@ -1,1 +1,1 @@
-alert("salut din javascipt.js");
+//alert("salut din javascipt.js");
